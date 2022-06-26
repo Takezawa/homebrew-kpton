@@ -32,7 +32,7 @@ class KptonScala < Formula
     (idea/"doc/scala-devel-docs").install_symlink doc => "api"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     To use with IntelliJ, set the Scala home to:
       #{opt_prefix}/idea
     EOS
@@ -40,7 +40,7 @@ class KptonScala < Formula
 
   test do
     file = testpath/"hello.scala"
-    file.write <<-EOS.undent
+    file.write <<~EOS
       object Computer {
         def main(args: Array[String]) {
           println(2 + 2)
