@@ -1,6 +1,6 @@
 class KptonScala < Formula
-  homepage "http://www.scala-lang.org/"
-  url "http://www.scala-lang.org/files/archive/scala-2.10.5.tgz"
+  homepage "https://scala-lang.org/"
+  url "https://www.scala-lang.org/files/archive/scala-2.10.5.tgz"
   sha256 "918daf7de186305ff3c47bd0e6b03e74d6648c5239c050687b57b8fac2f87eb2"
 
   bottle do
@@ -15,7 +15,7 @@ class KptonScala < Formula
   option "with-docs", "Also install library documentation"
 
   resource "docs" do
-    url "http://www.scala-lang.org/files/archive/scala-docs-2.10.5.zip"
+    url "https://www.scala-lang.org/files/archive/scala-docs-2.10.5.zip"
     sha256 "49263fc3b64f8d08bca906bb0c3f196eb6f3e699f810105a2b6d1d3d9cf030ca"
   end
 
@@ -35,7 +35,7 @@ class KptonScala < Formula
 
     # Set up an IntelliJ compatible symlink farm in "idea"
     idea = prefix/"idea"
-    idea.install_symlink libexec/"src", libexec/"lib"
+    idea.install_symlink libexec/"src", libexec/"lib", libexec/"fsc", libexec/"scala", libexec/"scalac", libexec/"scaladoc",  libexec/"scalap"
     (idea/"doc/scala-devel-docs").install_symlink doc => "api"
   end
 
